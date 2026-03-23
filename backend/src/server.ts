@@ -1,6 +1,7 @@
 import { app } from './app';
-import { env } from './config/env';
 
-app.listen(env.port, () => {
-  console.log(`Backend server listening on port ${env.port}`);
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
